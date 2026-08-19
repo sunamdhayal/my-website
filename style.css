@@ -1,4 +1,4 @@
-/* Vibrant animated background */
+/* Make the whole page a flex container */
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
@@ -8,7 +8,7 @@ body {
   color: #fff;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: 100vh; /* full height */
 }
 
 @keyframes gradientBG {
@@ -17,63 +17,34 @@ body {
   100% {background-position: 0% 50%;}
 }
 
-/* Center everything neatly */
+/* Header stays at top */
+header {
+  text-align: center;
+  padding: 20px;
+}
+
+/* Footer stays at bottom */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: rgba(255,255,255,0.2);
+  backdrop-filter: blur(10px);
+  color: #fff;
+  font-weight: bold;
+}
+
+/* Main content fills the middle */
 main {
-  flex: 1;
+  flex: 1; /* takes all space between header and footer */
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: center; /* centers vertically */
   text-align: center;
   padding: 40px;
 }
 
-/* Hero banner */
-.hero {
-  position: relative;
-  text-align: center;
-}
-.hero-img {
-  width: 100%;
-  height: 400px;
-  object-fit: cover;
-  filter: brightness(60%);
-}
-.hero-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.hero-text h1 {
-  font-size: 3em;
-  background: linear-gradient(to right, #ff512f, #dd2476);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.hero-text p {
-  font-size: 1.5em;
-}
-
-/* Navigation bar */
-nav {
-  background: rgba(255,255,255,0.15);
-  backdrop-filter: blur(10px);
-  text-align: center;
-  padding: 15px;
-}
-nav a {
-  color: #fff;
-  margin: 0 15px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s;
-}
-nav a:hover {
-  color: #ffeb3b;
-}
-
-/* Centered content box */
+/* Centered content box with glow */
 .center-content {
   background: rgba(255,255,255,0.1);
   backdrop-filter: blur(10px);
@@ -88,10 +59,3 @@ nav a:hover {
   from {opacity: 0; transform: translateY(20px);}
   to {opacity: 1; transform: translateY(0);}
 }
-
-/* Footer */
-footer {
-  text-align: center;
-  padding: 20px;
-  background: rgba(255,255,255,0.2);
-  backdrop
