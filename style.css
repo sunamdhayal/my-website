@@ -1,4 +1,39 @@
-/* Hero Banner */
+/* Background with gradient */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fad0c4, #fbc2eb, #a6c1ee);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  color: #222;
+}
+
+/* Gradient animation */
+@keyframes gradientBG {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+/* Navigation bar */
+nav {
+  background: rgba(255,255,255,0.2);
+  backdrop-filter: blur(10px);
+  text-align: center;
+  padding: 15px;
+}
+nav a {
+  color: #fff;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+nav a:hover {
+  color: #ffeb3b;
+}
+
+/* Hero section */
 .hero {
   position: relative;
   text-align: center;
@@ -8,7 +43,7 @@
   width: 100%;
   height: 500px;
   object-fit: cover;
-  filter: brightness(50%);
+  filter: brightness(60%);
 }
 .hero-text {
   position: absolute;
@@ -18,30 +53,33 @@
 }
 .hero-text h1 {
   font-size: 3em;
-  color: #f5c518; /* golden accent */
+  background: linear-gradient(to right, #ff512f, #dd2476);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .hero-text p {
   font-size: 1.5em;
 }
 
-/* Cinematic Cards */
+/* Colorful cards */
 .cards {
   display: flex;
   justify-content: center;
   gap: 30px;
   padding: 40px;
+  flex-wrap: wrap;
 }
 .card {
-  background: #111;
-  border: 2px solid #f5c518;
-  border-radius: 10px;
+  background: rgba(255,255,255,0.8);
+  border-radius: 12px;
   overflow: hidden;
-  width: 300px;
+  width: 280px;
   text-align: center;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
   transition: transform 0.3s ease;
 }
 .card:hover {
-  transform: scale(1.05);
+  transform: translateY(-10px);
 }
 .card img {
   width: 100%;
@@ -49,24 +87,24 @@
   object-fit: cover;
 }
 .card h2 {
-  color: #f5c518;
+  color: #dd2476;
   margin: 15px 0;
 }
 .card p {
-  color: #eee;
+  color: #333;
   padding: 0 10px;
 }
 .btn {
   display: inline-block;
   margin: 15px 0;
   padding: 10px 20px;
-  background: #f5c518;
-  color: #111;
+  background: linear-gradient(to right, #ff512f, #dd2476);
+  color: #fff;
   text-decoration: none;
   font-weight: bold;
   border-radius: 5px;
 }
 .btn:hover {
-  background: #fff;
-  color: #000;
+  background: linear-gradient(to right, #dd2476, #ff512f);
 }
+
