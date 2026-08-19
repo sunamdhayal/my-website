@@ -1,15 +1,11 @@
-/* Dark Blue + Violet Gradient Background */
 body {
   margin: 0;
-  height: 100vh; /* full browser height */
-  display: flex;
-  align-items: center;     /* vertical centering */
-  justify-content: center; /* horizontal centering */
   font-family: 'Poppins', sans-serif;
+  text-align: center;
   background: linear-gradient(135deg, #0f2027, #203a43, #2c5364, #3a1c71, #2a0845);
   background-size: 400% 400%;
   animation: gradientBG 20s ease infinite;
-  color: #fff;
+  color: #e0e0e0; /* light gray text for readability */
 }
 
 @keyframes gradientBG {
@@ -18,26 +14,9 @@ body {
   100% {background-position: 0% 50%;}
 }
 
-/* Centered content box */
-.center-content {
-  text-align: center;
-  background: rgba(255,255,255,0.05);
-  backdrop-filter: blur(8px);
-  border-radius: 20px;
-  padding: 40px;
-  box-shadow: 0 0 25px rgba(0,0,0,0.6);
-  max-width: 800px;
-  animation: fadeIn 1.5s ease;
-}
-
-@keyframes fadeIn {
-  from {opacity: 0; transform: translateY(20px);}
-  to {opacity: 1; transform: translateY(0);}
-}
-
 h1 {
   font-size: 3em;
-  margin-bottom: 20px;
+  margin-top: 40px;
   background: linear-gradient(to right, #6a11cb, #2575fc);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -49,4 +28,25 @@ h2 {
   background: linear-gradient(to right, #2a0845, #6441a5);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+nav {
+  margin: 20px 0;
+}
+nav a {
+  color: #b3c7ff;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+nav a:hover {
+  color: #ffeb3b;
+}
+
+footer {
+  margin-top: 40px;
+  padding: 15px;
+  background: rgba(255,255,255,0.05);
+  color: #ccc;
 }
