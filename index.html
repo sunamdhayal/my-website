@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sunam's Cinematic Website</title>
+  <title>Sunam Dhayal - Welcome to My Life</title>
   <style>
     /* Global Theme */
     body {
@@ -38,20 +38,32 @@
       height: 80vh;
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      align-items: center;
+      justify-content: center; /* vertical center */
+      align-items: center;     /* horizontal center */
       text-align: center;
       background: url('banner.jpg') center/cover no-repeat;
       color: #fff;
       text-shadow: 0 0 10px #000;
     }
     .hero h1 {
-      font-size: 3em;
+      font-size: 3.5em;
       margin: 0;
+      animation: glow 2s ease-in-out infinite alternate;
     }
     .hero p {
-      font-size: 1.2em;
+      font-size: 1.5em;
       margin-top: 10px;
+      color: #00ffff;
+    }
+
+    /* Glowing Effect */
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff;
+      }
+      to {
+        text-shadow: 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff;
+      }
     }
 
     /* Footer */
@@ -73,18 +85,18 @@
 <body>
   <!-- Navigation -->
   <nav>
-    <a href="#friends">Friends Zone</a>
-    <a href="#trips">Trips</a>
-    <a href="#photos">Photos</a>
-    <a href="#videos">Videos</a>
-    <a href="#adventures">Adventures</a>
-    <a href="#vlog">Daily Vlog</a>
+    <a href="friends.html">Friends Zone</a>
+    <a href="trips.html">Trips</a>
+    <a href="photos.html">Photos</a>
+    <a href="videos.html">Videos</a>
+    <a href="adventures.html">Adventures</a>
+    <a href="vlog.html">Daily Vlog</a>
   </nav>
 
   <!-- Hero Section -->
   <section class="hero">
-    <h1>Welcome to My World</h1>
-    <p>Cinematic vibes, colorful journeys, and daily adventures</p>
+    <h1>Sunam Dhayal</h1>
+    <p>Welcome to My Life</p>
   </section>
 
   <!-- Footer -->
