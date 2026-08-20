@@ -3,35 +3,94 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sunam Dhayal - My Life</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Sunam's Cinematic Website</title>
+  <style>
+    /* Global Theme */
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+      color: #f0f0f0;
+    }
+
+    /* Navigation Bar */
+    nav {
+      background: rgba(0,0,0,0.8);
+      padding: 15px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      position: sticky;
+      top: 0;
+    }
+    nav a {
+      color: #00ffff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #ff00ff;
+    }
+
+    /* Hero Section */
+    .hero {
+      height: 80vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: url('banner.jpg') center/cover no-repeat;
+      color: #fff;
+      text-shadow: 0 0 10px #000;
+    }
+    .hero h1 {
+      font-size: 3em;
+      margin: 0;
+    }
+    .hero p {
+      font-size: 1.2em;
+      margin-top: 10px;
+    }
+
+    /* Footer */
+    footer {
+      background: rgba(0,0,0,0.9);
+      padding: 20px;
+      text-align: center;
+      font-size: 0.9em;
+      color: #aaa;
+    }
+    footer input {
+      padding: 8px;
+      border: none;
+      border-radius: 4px;
+      margin-top: 10px;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <h1>Welcome to My Life</h1>
-    <p>I am Sunam Dhayal, student of Panjab University Chandigarh</p>
-  </header>
-
+  <!-- Navigation -->
   <nav>
-    <a href="intro.html">Introduction</a>
-    <a href="friends.html">Friends Zone</a>
-    <a href="trips.html">Trips</a>
-    <a href="photos.html">Photos</a>
-    <a href="videos.html">Videos</a>
-    <a href="adventures.html">Adventures</a>
-    <a href="vlogs.html">Daily Vlog</a>
-    <a href="query.html">Query</a>
+    <a href="#friends">Friends Zone</a>
+    <a href="#trips">Trips</a>
+    <a href="#photos">Photos</a>
+    <a href="#videos">Videos</a>
+    <a href="#adventures">Adventures</a>
+    <a href="#vlog">Daily Vlog</a>
   </nav>
 
-  <main>
-    <section>
-      <h2>Explore My Journey</h2>
-      <p>Click the tabs above to explore my introduction, adventures, trips, and daily vlogs.</p>
-    </section>
-  </main>
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Welcome to My World</h1>
+    <p>Cinematic vibes, colorful journeys, and daily adventures</p>
+  </section>
 
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2026 Sunam Dhayal | All Rights Reserved</p>
+    <p>Have a query? Ask here:</p>
+    <input type="text" placeholder="Type your question...">
   </footer>
 </body>
 </html>
